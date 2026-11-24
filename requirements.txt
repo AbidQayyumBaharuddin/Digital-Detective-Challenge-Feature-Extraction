@@ -1,0 +1,6 @@
+# General runtime dependencies (not a locked environment)
+opencv-python
+numpy
+matplotlib
+ipython
+notebook
