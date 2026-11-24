@@ -145,3 +145,14 @@ Developed for the *Digital Detective: The Feature Extraction Challenge* coursewo
 - [OpenCV documentation](https://docs.opencv.org/)
 - [Jupyter documentation](https://docs.jupyter.org/)
 
+## Author
+
+**Name:** MUHAMMAD ABID QAYYUM
+
+**Course:** Computer Vision / Bachelor in Artificial Intelligence
+
+**Project:** Digital Detective — The Feature Extraction Challenge
+
+**GitHub:** [AbidQayyumBaharuddin](https://github.com/AbidQayyumBaharuddin)
+
+This project was developed as part of an academic computer vision assignment to explore feature extraction, feature matching, object localization and robustness evaluation.
