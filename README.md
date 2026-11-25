@@ -161,7 +161,7 @@ Developed for the *Digital Detective: The Feature Extraction Challenge* coursewo
 
 ## Author
 
-**Name:** MUHAMMAD ABID QAYYUM
+**Name:** MUHAMMAD ABID QAYYUM BAHARUDDIN
 
 **Course:** Computer Vision / Bachelor in Artificial Intelligence
 
