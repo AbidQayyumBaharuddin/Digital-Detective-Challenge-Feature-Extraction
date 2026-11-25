@@ -35,16 +35,30 @@ The experiment compares a conventional ORB/Hamming matching baseline with a scal
 ## Methodology
 
 ```mermaid
-flowchart TD
-    A[Input images] --> B[Resize and prepare images]
-    B --> C[Identify five target clues]
-    C --> D[ORB and Hamming baseline]
-    C --> E[Multi-scale and multi-angle patch search]
-    E --> F[Spatial consistency and acceptance checks]
-    F --> G[Automatic localization]
-    D --> H[Compare with manual annotations]
-    G --> H
-    H --> I[Robustness tests and reflection]
+%%{init: {"htmlLabels": false, "flowchart": {"nodeSpacing": 20, "rankSpacing": 22, "padding": 8, "curve": "stepBefore"}}}%%
+flowchart LR
+    A["Input images<br/>Resize and prepare"] --> B["Identify five<br/>target clues"]
+
+    B --> C["ORB and Hamming<br/>baseline"]
+    B --> D["Multi-scale and<br/>multi-angle patch search<br/>↓<br/>Spatial consistency<br/>and acceptance checks<br/>↓<br/>Automatic localization"]
+
+    C --> E["Compare with<br/>manual annotations"]
+    D --> E
+    E --> F["Robustness tests<br/>and reflection"]
+
+    classDef preparation fill:#1e293b,stroke:#94a3b8,color:#ffffff;
+    classDef baseline fill:#422006,stroke:#eab308,color:#ffffff;
+    classDef improved fill:#082f49,stroke:#38bdf8,color:#ffffff;
+    classDef evaluation fill:#052e16,stroke:#22c55e,color:#ffffff;
+    classDef reflection fill:#2e1065,stroke:#a78bfa,color:#ffffff;
+
+    class A,B preparation;
+    class C baseline;
+    class D improved;
+    class E evaluation;
+    class F reflection;
+
+    linkStyle 3,4 interpolate stepAfter;
 ```
 
 The improved method searches the entire scene using normalized cross-correlation (`TM_CCOEFF_NORMED`). It evaluates nine scales (14–30%) and twelve angles (−20° to +35°), totaling 108 pose hypotheses. The three strongest local scores are averaged; acceptance also requires sufficient strong-feature support and separation from a competing location. A local score of at least 0.50 is classified as strong. These thresholds are heuristic, not calibrated probabilities.
